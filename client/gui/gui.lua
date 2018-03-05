@@ -50,10 +50,10 @@ AddEventHandler("SquadMemberLeft", function(memberId,memberName)
 	UpdateSquadMembers()
 end)
 
-AddEventHandler("SquadMemberJoined", function(PlayerName,PlayerId)
+AddEventHandler("SquadMemberJoined", function(PlayerName,playerid)
 	TriggerEvent("showNotification", "~g~"..PlayerName.."~w~ joined your Squad!")
 	Citizen.Trace("someone joined our squad\n")
-	table.insert(curSquadMembers, PlayerId)
+	table.insert(curSquadMembers, playerid)
 	UpdateSquadMembers()
 end)
 
